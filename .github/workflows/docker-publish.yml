@@ -67,6 +67,12 @@ jobs:
         uses: wei/wget@v1
         with:
           args: https://github.com/phracker/MacOSX-SDKs/releases/download/11.3/MacOSX11.1.sdk.tar.xz
+          
+      - name: Print info
+        run: |
+          ls -la .
+          pwd
+          env
 
       # Build and push Docker image with Buildx (don't push on PR)
       # https://github.com/docker/build-push-action
